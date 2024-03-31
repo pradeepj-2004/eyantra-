@@ -1,0 +1,4 @@
+int32 aruco
+---
+bool success
+string message

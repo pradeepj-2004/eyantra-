@@ -1,0 +1,9 @@
+# msg/ArucoTf.msg
+float32[] linear_pose_x
+float32[] linear_pose_y
+float32[] linear_pose_z
+float32[] rotational_pose_x
+float32[] rotational_pose_y
+float32[] rotational_pose_z
+float32[] rotational_pose_w
+string[] ids

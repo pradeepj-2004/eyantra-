@@ -25,7 +25,6 @@ find_package(rclpy REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/DockSw.srv"
-  "srv/Rack.srv"
   "msg/Ecustomtopic.msg"
   #DEPENDENCIES geometry_msgs # Add packages that above messages depend on, in this case geometry_msgs for Sphere.msg
 )
@@ -41,29 +40,5 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
-install(
-  DIRECTORY
-    srv
-    msg
-    scripts
-  DESTINATION
-    share/${PROJECT_NAME}/
-)
-
-install(
-  PROGRAMS
-  DESTINATION lib/${PROJECT_NAME}
-)
-
-install(PROGRAMS
-	scripts/ebot_docking_boilerplate.py
-	scripts/ebot_task3b.py
-	scripts/service_3b.py
-	scripts/ebot_service_task4c.py
-	scripts/ebot_task4c.py
-	scripts/server.py
-  DESTINATION lib/${PROJECT_NAME}
-)
 
 ament_package()

@@ -1052,7 +1052,7 @@ class MoveIt2:
             return None
 
     def _send_goal_async_move_action(
-        self, wait_for_server_timeout_sec: Optional[float] = 1.0
+        self, wait_for_server_timeout_sec: Optional[float] = 7.0
     ):
         stamp = self._node.get_clock().now().to_msg()
         self.__move_action_goal.request.workspace_parameters.header.stamp = stamp
